@@ -16,8 +16,9 @@ export function TextInput({ value, onChangeText, placeholder, ...rest }) {
 
 const styles = StyleSheet.create({
   inputBox: {
-    width: "85%",
-    margin: 10,
+    width: "100%",
+    marginHorizontal: 10,
+    marginBottom: 10,
     padding: 15,
     fontSize: 16,
     borderColor: "#707070",

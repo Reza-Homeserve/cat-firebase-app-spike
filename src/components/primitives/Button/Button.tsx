@@ -12,7 +12,7 @@ export function Button({ children, onPress }) {
 
 const styles = StyleSheet.create({
   button: {
-    marginTop: 30,
+    marginTop: 10,
     marginBottom: 20,
     paddingVertical: 5,
     paddingBottom: 8,
@@ -21,7 +21,7 @@ const styles = StyleSheet.create({
     borderColor: theme.colors.primary,
     borderWidth: 1,
     borderRadius: 5,
-    width: 200,
+    width: "100%",
   },
   buttonText: {
     fontSize: 20,

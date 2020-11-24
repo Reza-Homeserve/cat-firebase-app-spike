@@ -1,10 +1,10 @@
 import React, { useState, ReactElement } from "react";
-import { Button, TextInput } from "../../components/primitives";
+import { Container, Button, TextInput } from "../../components/primitives";
 import { Firebase, db } from "../../services/Firebase";
 
 import { View, StyleSheet, Text } from "react-native";
 
-import { LOGIN } from "../../constants";
+import { LOGIN, FIRESTORE_USERS_DOCUMENT_NAME } from "../../constants";
 
 export function Register({ navigation }): ReactElement {
   const [name, setName] = useState<string>("");
@@ -26,7 +26,9 @@ export function Register({ navigation }): ReactElement {
             name: name,
           };
 
-          db.collection("users").doc(res.user.uid).set(user);
+          db.collection(FIRESTORE_USERS_DOCUMENT_NAME)
+            .doc(res.user.uid)
+            .set(user);
 
           setIsRegistered(true);
         }
@@ -39,41 +41,47 @@ export function Register({ navigation }): ReactElement {
   const handleLogin = () => navigation.navigate(LOGIN);
 
   return (
-    <View style={styles.container}>
-      <TextInput
-        value={name}
-        onChangeText={(name) => setName(name)}
-        placeholder="Full Name"
-      />
-      <TextInput
-        value={email}
-        onChangeText={(email) => setEmail(email)}
-        placeholder="Email"
-        autoCapitalize="none"
-      />
-      <TextInput
-        value={password}
-        onChangeText={(password) => setPassword(password)}
-        placeholder="Password"
-        secureTextEntry={true}
-      />
-      {!isRegistered && <Button onPress={handleSignUp}>Signup</Button>}
+    <Container>
+      <Text style={styles.pageTitle}>Register</Text>
+      <View style={styles.formContainer}>
+        <TextInput
+          value={name}
+          onChangeText={(name) => setName(name)}
+          placeholder="Full Name"
+        />
+        <TextInput
+          value={email}
+          onChangeText={(email) => setEmail(email)}
+          placeholder="Email"
+          autoCapitalize="none"
+        />
+        <TextInput
+          value={password}
+          onChangeText={(password) => setPassword(password)}
+          placeholder="Password"
+          secureTextEntry={true}
+        />
+        {!isRegistered && <Button onPress={handleSignUp}>Signup</Button>}
 
-      {isRegistered && (
-        <>
-          <Text>Great success! </Text>
-          <Button onPress={handleLogin}>Login here</Button>
-        </>
-      )}
-    </View>
+        {isRegistered && (
+          <>
+            <Text>Great success! </Text>
+            <Button onPress={handleLogin}>Login here</Button>
+          </>
+        )}
+      </View>
+    </Container>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
+  pageTitle: {
+    fontSize: 30,
+    fontWeight: "bold",
     flex: 1,
-    backgroundColor: "#fff",
+  },
+  formContainer: {
+    flex: 4,
     alignItems: "center",
-    justifyContent: "center",
   },
 });

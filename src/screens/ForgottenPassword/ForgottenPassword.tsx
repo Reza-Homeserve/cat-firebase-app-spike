@@ -1,6 +1,6 @@
 import React, { useState, ReactElement } from "react";
 import { Firebase } from "../../services/Firebase";
-import { TextInput, Button } from "../../components/primitives";
+import { TextInput, Container, Button } from "../../components/primitives";
 import { View, StyleSheet, Text } from "react-native";
 
 export function ForgottenPassword({ navigation }): ReactElement {
@@ -16,27 +16,31 @@ export function ForgottenPassword({ navigation }): ReactElement {
     }
   };
 
-  const isClickable = email && !hasSentRequest;
-
   return (
-    <View style={styles.container}>
-      <TextInput
-        value={email}
-        onChangeText={(email) => setEmail(email)}
-        placeholder="Email"
-        autoCapitalize="none"
-      />
-      <Button onPress={handleRequest}>Change password</Button>
-      {hasSentRequest && <Text>Done! Check your email.</Text>}
-    </View>
+    <Container>
+      <Text style={styles.pageTitle}>Forgotten password</Text>
+      <View style={styles.formContainer}>
+        <TextInput
+          value={email}
+          onChangeText={(email) => setEmail(email)}
+          placeholder="Email"
+          autoCapitalize="none"
+        />
+        <Button onPress={handleRequest}>Change password</Button>
+        {hasSentRequest && <Text>Done! Check your email.</Text>}
+      </View>
+    </Container>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
+  pageTitle: {
+    fontSize: 30,
+    fontWeight: "bold",
     flex: 1,
-    backgroundColor: "#fff",
+  },
+  formContainer: {
+    flex: 4,
     alignItems: "center",
-    justifyContent: "center",
   },
 });
