@@ -66,7 +66,7 @@ export function Register({ navigation }): ReactElement {
         {isRegistered && (
           <>
             <Text>Great success! </Text>
-            <Button onPress={handleLogin}>Login here</Button>
+            <Button label="Login here" onPress={handleLogin} />
           </>
         )}
       </View>

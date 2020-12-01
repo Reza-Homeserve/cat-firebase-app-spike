@@ -47,7 +47,7 @@ export function Login({ navigation }): ReactElement {
             placeholder="Password"
             secureTextEntry={true}
           />
-          <Button onPress={handleEmailPasswordLogin}>Sign in</Button>
+          <Button label="Sign in" block onPress={handleEmailPasswordLogin} />
           <RNButton
             title="Forgotten your password?"
             onPress={() => navigation.navigate(FORGOTTON_PASSWORD)}

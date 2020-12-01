@@ -110,9 +110,10 @@ export function Dashboard({ navigation }): ReactElement {
             <Image source={{ uri: user.photoURL }} style={styles.avatar} />
             <Text>Name: {user.displayName}</Text>
             <Text>Email: {user.email}</Text>
-            <Button onPress={handlePushNotification}>
-              Trigger notification
-            </Button>
+            <Button
+              label="Trigger notification"
+              onPress={handlePushNotification}
+            />
           </View>
           <View style={{ alignItems: "center", flex: 2 }}>
             <RNButton onPress={handleSignout} title="Sign out" />

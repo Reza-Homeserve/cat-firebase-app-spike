@@ -26,7 +26,7 @@ export function ForgottenPassword({ navigation }): ReactElement {
           placeholder="Email"
           autoCapitalize="none"
         />
-        <Button onPress={handleRequest}>Change password</Button>
+        <Button label="Change password" onPress={handleRequest} />
         {hasSentRequest && <Text>Done! Check your email.</Text>}
       </View>
     </Container>
