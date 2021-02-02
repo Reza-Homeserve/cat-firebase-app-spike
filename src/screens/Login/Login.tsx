@@ -2,7 +2,7 @@ import React, { useState, useEffect, ReactElement } from "react";
 import { Text, View, StyleSheet, Button as RNButton } from "react-native";
 import { Button, TextInput, Container } from "../../components/primitives";
 import { GoogleSignInButton } from "../../components/molecules";
-import { Firebase, db } from "../../services/Firebase";
+import { Firebase, db, getFeature } from "../../services/Firebase";
 
 import { DASHBOARD, REGISTER, FORGOTTON_PASSWORD } from "../../constants";
 
@@ -48,10 +48,22 @@ export function Login({ navigation }): ReactElement {
             secureTextEntry={true}
           />
           <Button label="Sign in" block onPress={handleEmailPasswordLogin} />
+          {getFeature("awesome_new_feature").asString() ===
+            '"I am a feature"' && (
+            <Text style={{ color: "red", fontSize: 40 }}>
+              Hey {getFeature("awesome_new_feature").asString()}
+            </Text>
+          )}
+
+          <Text style={{ color: "red", fontSize: 40 }}>
+            Hey {getFeature("awesome_new_feature").asString()}
+          </Text>
+
           <RNButton
             title="Forgotten your password?"
             onPress={() => navigation.navigate(FORGOTTON_PASSWORD)}
           />
+
           <RNButton
             title="Don't have an account yet? Sign up"
             onPress={() => navigation.navigate(REGISTER)}

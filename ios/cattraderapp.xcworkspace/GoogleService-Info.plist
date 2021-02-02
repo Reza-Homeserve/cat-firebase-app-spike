@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>612562237859-6ldgkbg38c7am9fnrsfes34g8ijr18sr.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.612562237859-6ldgkbg38c7am9fnrsfes34g8ijr18sr</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBJxILN_gk2UKEVS8frpo3r4sV14d87G64</string>
+	<key>GCM_SENDER_ID</key>
+	<string>612562237859</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>org.name.cattraderapp</string>
+	<key>PROJECT_ID</key>
+	<string>cat-project-15807</string>
+	<key>STORAGE_BUCKET</key>
+	<string>cat-project-15807.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:612562237859:ios:9932a90be57c44938a0216</string>
+	<key>DATABASE_URL</key>
+	<string>https://cat-project-15807.firebaseio.com</string>
+</dict>
+</plist>

@@ -1,0 +1,83 @@
+{
+  "project_info": {
+    "project_number": "612562237859",
+    "firebase_url": "https://cat-project-15807.firebaseio.com",
+    "project_id": "cat-project-15807",
+    "storage_bucket": "cat-project-15807.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:612562237859:android:dc1dbfb2b655fe198a0216",
+        "android_client_info": {
+          "package_name": "blah.blah"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "612562237859-39tgpnr4k09mll1jg5l9u0ltl7meb9am.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAsiwyr2AbAVUtSuO95JtgJD4T0htW0tds"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "612562237859-39tgpnr4k09mll1jg5l9u0ltl7meb9am.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "612562237859-1fvp51v7iors61dlno0fn8s80kt5hbgf.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.rezarahman.cattraderapp"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:612562237859:android:7736af446681fa118a0216",
+        "android_client_info": {
+          "package_name": "com.cattraderapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "612562237859-39tgpnr4k09mll1jg5l9u0ltl7meb9am.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAsiwyr2AbAVUtSuO95JtgJD4T0htW0tds"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "612562237859-39tgpnr4k09mll1jg5l9u0ltl7meb9am.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "612562237859-1fvp51v7iors61dlno0fn8s80kt5hbgf.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.rezarahman.cattraderapp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
